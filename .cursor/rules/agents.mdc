@@ -1,0 +1,10 @@
+---
+description: Project conventions (imports .factory/AGENTS.md)
+alwaysApply: true
+---
+
+See @.factory/AGENTS.md for full project conventions: git workflow,
+security, code quality, architecture, API design, testing, performance,
+observability, and documentation standards. This file exists only so
+Cursor loads those conventions automatically — do not duplicate content
+here.
