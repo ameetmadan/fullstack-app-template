@@ -10,6 +10,7 @@ permissions:
 
 jobs:
   commitlint:
+    if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -43,10 +44,12 @@ jobs:
       - name: Install and test frontend
         working-directory: frontend
         run: |
-          npm install
+          npm ci
+          npm run build
           npm test
       - name: Install and test backend
         working-directory: backend
         run: |
-          npm install
+          npm ci
+          npm run build
           npm test
