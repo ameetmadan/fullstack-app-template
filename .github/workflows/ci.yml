@@ -35,11 +35,13 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   frontend-ci:
-    uses: ameetmadan/software-factory/.github/workflows/ci-node.yml@1e6c39e539bfa61180aa5428b51813a6d41c4cfd
+    # pinned to feature/ci-pipeline-templates branch tip; re-pin to a main-branch SHA once software-factory's stacked PRs merge (squash merge means this SHA never lands on main)
+    uses: ameetmadan/software-factory/.github/workflows/ci-node.yml@9cd48e03644ea5c24b3fd4961bc5dab20981bd56
     with:
       working-directory: frontend
 
   backend-ci:
-    uses: ameetmadan/software-factory/.github/workflows/ci-node.yml@1e6c39e539bfa61180aa5428b51813a6d41c4cfd
+    # pinned to feature/ci-pipeline-templates branch tip; re-pin to a main-branch SHA once software-factory's stacked PRs merge (squash merge means this SHA never lands on main)
+    uses: ameetmadan/software-factory/.github/workflows/ci-node.yml@9cd48e03644ea5c24b3fd4961bc5dab20981bd56
     with:
       working-directory: backend
